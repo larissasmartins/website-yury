@@ -1,20 +1,20 @@
 @font-face {
 	font-family: 'Honnie';
 	src: url('/fonts/honnie/Honnie.otf') format('opentype'),
-	url('Honnie.ttf') format('trutype');
+	url('/fonts/honnie/Honnie.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 $font-primary: 'Honnie', sans-serif;
-$font-secondary: 'Monteserrat', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
 
 // Overrides
 $grid-gutter-width: 40px !default; 
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
-$brand-primary: #16AAE4 !default; // já apliquei a cor atual
+$brand-primary: #11B6EF !default; // já apliquei a cor atual
 $brand-secondary: #1fb5f6 !default; 
 
 $brand-white: #fff;
@@ -121,7 +121,7 @@ a {
 p {
 	margin-bottom: 1.5em;
 	font-size: 20px;
-	color: $brand-lighter;
+	color: $brand-black;
 	font-weight: 300;
 	font-family: $font-secondary;
 }
@@ -180,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
 			width: 52px;
 			height: 30px;
 			padding: 0;
-			font-size: 180px; 
+			font-size: 170px; 
 			font-weight: 800; 
 			line-height: 80px; 
 			background-image: url('../images/gif-logo.gif'); 
@@ -190,6 +190,7 @@ h1, h2, h3, h4, h5, h6 {
 			-webkit-background-clip: text;
 			text-transform: uppercase;
 			margin: 10px 0;
+			font-family: $font-secondary;
 
 			@media (max-width: 1202px) {
 				font-size: 150px;
@@ -233,8 +234,9 @@ h1, h2, h3, h4, h5, h6 {
 			}
 
 			a {
-				font-family: $font-primary;
-				font-size: 38px;
+				font-family: $font-secondary;
+				font-size: 20px;
+				text-transform: uppercase;
 				color: rgba(0,0,0,1);
 				position: relative;
 				font-weight: 400;
@@ -274,22 +276,20 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-#work, #about, #services {
+#work, #about, #services, #contact {
 	padding-bottom: 5em;
-	@media screen and (max-width: $screen-sm) {
-		padding-bottom: 3em;
-	}
-}
-#main {
-	padding-bottom: 7em;
+	margin: 100px auto;
 	@media screen and (max-width: $screen-sm) {
 		padding-bottom: 3em;
 	}
 }
 
 #services {
+	background-color: #11b6ef;
+	margin: 100px 0;
+
 	.service {
-		text-align: center;
+		text-align: left;
 		padding: 0 2em;
 		margin-bottom: 40px;
 		float: left;
@@ -298,7 +298,6 @@ h1, h2, h3, h4, h5, h6 {
 			padding: 0 0em;
 		}
 		h3 {
-			font-size: 22px;
 			margin-bottom: 10px;
 		}
 		.service-icon {
@@ -363,9 +362,7 @@ h1, h2, h3, h4, h5, h6 {
 #website-author {
 	.author {
 		.website-social-icons {
-			flex-direction: row;
 			display: flex;
-			justify-content: center;
 			padding: 0;
 			gap: 15px;
 		}
@@ -396,6 +393,16 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+#contact {
+	.container .contact-group {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: 992px) {
+			flex-direction: column-reverse;
+		}
+	}
+}
+
 form { 
 	font-family: 'montserrat';
     font-size: 14px;
@@ -405,13 +412,14 @@ form {
 		display: block;
 		width: 100%;
 		height: 50px;
-		padding: 10px 15px;
+		padding: 8px 10px;
 		font-size: 20px;
 		line-height: 1.42857;
-		color: #555555;
+		color: $brand-black;
 		background-color: #fff;
 		background-image: none;
-		border: 2px solid #ccc;
+		border: none;
+		border-bottom: 3px solid $brand-black;
 		border-radius: 4px;
 		box-shadow: none;
 		&:focus, &:active {
@@ -455,8 +463,8 @@ form {
 			}
 		}
 		&:hover, &:active, &:focus {
-			background: #393e46!important;
-			color: $brand-white;
+			background: transparent!important;
+			color: $brand-primary;
 			outline: none!important;
 		}
 		&.btn-default {
@@ -514,8 +522,6 @@ form {
 
 footer{
 	
-	// padding-bottom: 5em;
-	
 	p {
 		line-height: 1;
 	}
@@ -545,4 +551,13 @@ footer{
 	.social {
 		text-align: center;
 	}
+
+	.container {
+		.footer-widget .pull-right .social {
+			display: flex;
+    		justify-content: flex-end;
+   			gap: 2rem;
+		}
+	}
 }
+

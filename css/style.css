@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Honnie";
-  src: url("/fonts/honnie/Honnie.otf") format("opentype"), url("Honnie.ttf") format("trutype");
+  src: url("/fonts/honnie/Honnie.otf") format("opentype"), url("/fonts/honnie/Honnie.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -17,39 +17,16 @@ body {
   font-size: 20px;
   font-weight: 300;
 }
-body .scrollTop {
-  position: fixed;
-  bottom: 150px;
-  right: 30px;
-  width: 60px;
-  height: 60px;
-  background: #fff url(/images/scroll-top80.png);
-  background-size: 60px;
-  cursor: pointer;
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.3s;
-}
-body .scrollTop.active {
-  bottom: 40px;
-  visibility: visible;
-  opacity: 1;
-}
-@media (max-width: 768px) {
-  body .scrollTop {
-    display: none;
-  }
-}
 
 a {
-  color: #16AAE4;
+  color: #11B6EF;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover {
   text-decoration: underline !important;
-  color: #16AAE4 !important;
+  color: #11B6EF !important;
 }
 a:focus, a:active {
   outline: none;
@@ -58,7 +35,7 @@ a:focus, a:active {
 p {
   margin-bottom: 1.5em;
   font-size: 20px;
-  color: #848484;
+  color: #000;
   font-weight: 300;
   font-family: "Montserrat", sans-serif;
 }
@@ -168,8 +145,9 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid rgba(151, 151, 165, 0.3294117647);
 }
 #website-header .nav li a {
-  font-family: "Honnie", sans-serif;
-  font-size: 38px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
   color: rgb(0, 0, 0);
   position: relative;
   font-weight: 400;
@@ -200,7 +178,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 480px) {
   #website-header .nav li.active a {
     border-bottom: 2px solid transparent;
-    color: #16AAE4;
+    color: #11B6EF;
   }
 }
 @media screen and (max-width: 992px) {
@@ -209,26 +187,22 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#work, #about, #services {
+#work, #about, #services, #contact {
   padding-bottom: 5em;
+  margin: 100px auto;
 }
 @media screen and (max-width: 768px) {
-  #work, #about, #services {
+  #work, #about, #services, #contact {
     padding-bottom: 3em;
   }
 }
 
-#main {
-  padding-bottom: 7em;
+#services {
+  background-color: #11b6ef;
+  margin: 100px 0;
 }
-@media screen and (max-width: 768px) {
-  #main {
-    padding-bottom: 3em;
-  }
-}
-
 #services .service {
-  text-align: center;
+  text-align: left;
   padding: 0 2em;
   margin-bottom: 40px;
   float: left;
@@ -247,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #services .service .service-icon i {
   font-size: 40px;
-  color: #16AAE4;
+  color: #11B6EF;
 }
 #services .service p {
   font-size: 18px;
@@ -295,9 +269,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #website-author .author .website-social-icons {
-  flex-direction: row;
   display: flex;
-  justify-content: center;
   padding: 0;
   gap: 15px;
 }
@@ -348,16 +320,17 @@ form .form-control {
   padding: 8px 10px;
   font-size: 20px;
   line-height: 1.42857;
-  color: #555555;
+  color: #000;
   background-color: #fff;
   background-image: none;
-  border: 2px solid #ccc;
+  border: none;
+  border-bottom: 3px solid #000;
   border-radius: 4px;
   box-shadow: none;
 }
 form .form-control:focus, form .form-control:active {
   box-shadow: none;
-  border: 2px solid #16AAE4;
+  border: 2px solid #11B6EF;
 }
 form #submit {
   height: 57px;
@@ -386,18 +359,18 @@ form .btn {
   transition: 0.3s;
 }
 form .btn.btn-primary {
-  background: #16AAE4;
+  background: #11B6EF;
   color: #fff;
   border: none !important;
   border: 2px solid transparent !important;
 }
 form .btn.btn-primary:hover, form .btn.btn-primary:active, form .btn.btn-primary:focus {
   box-shadow: none;
-  background: #16AAE4;
+  background: #11B6EF;
 }
 form .btn:hover, form .btn:active, form .btn:focus {
-  background: #393e46 !important;
-  color: #fff;
+  background: transparent !important;
+  color: #11B6EF;
   outline: none !important;
 }
 form .btn.btn-default:hover, form .btn.btn-default:focus, form .btn.btn-default:active {
@@ -430,7 +403,7 @@ form .btn.btn-default:hover, form .btn.btn-default:focus, form .btn.btn-default:
   transition: 0.5s;
 }
 .social li a:hover, .social li a:focus {
-  color: #16AAE4;
+  color: #11B6EF;
   text-decoration: none;
 }
 .social li a i {

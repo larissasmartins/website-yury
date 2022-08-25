@@ -4,6 +4,18 @@
 
 
 
+	//Scroll Top Button
+	var scrollToTopBtn = document.getElementById("scrollToTopBtn")
+	var rootElement = document.documentElement
+	
+	function scrollToTop(){
+		rootElement.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		})
+		scrollToTopBtn.addEventListener("click", scrollToTop)
+	}
+
 	// iPad and iPod detection	
 	var isiPad = function(){
 		return (navigator.platform.indexOf("iPad") != -1);
@@ -176,21 +188,6 @@
 		} , { offset: '85%' } );
 	};
 	
-
-
-	//Scroll Top Button
-
-	window.addEventListener('scroll', function() {
-		var scroll = document.querySelector('.scrollTop');
-		scroll.classList.toggle("active", window.scrollY > 500)
-	})
-	
-	function scrollToTop(){
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth'
-		})
-	}
 	
 
 	// Document on load.
