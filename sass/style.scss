@@ -193,7 +193,7 @@ h1, h2, h3, h4, h5, h6 {
 			font-family: $font-secondary;
 
 			@media (max-width: 1202px) {
-				font-size: 150px;
+				font-size: 140px;
 			}
 
 			&:hover {
@@ -226,12 +226,12 @@ h1, h2, h3, h4, h5, h6 {
 			&:first-child {
 				margin-left: 0;	
 			}
-
+/*
 			&:last-child {
 				a {
 					border-bottom: 1px solid #9797a554; 
 			    }
-			}
+			}*/
 
 			a {
 				font-family: $font-secondary;
@@ -312,52 +312,56 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	}
 }
-#work{
-	.website-grid{
-		height: 625px;
-		background-size: cover;
-		margin-bottom: 30px;
-		position: relative;
 
-		@media screen and (max-width: $screen-xs) {
-			height: 400px;
-		}
-		
-		.image-popup{
-			position: absolute;
-			top: 20px;
-			bottom: 20px;
-			left: 20px;
-			right: 20px;
-			background: rgba(255,255,255,.9);
-			opacity: 0;
-			
-			.work-title{
+#work{
+		.website-grid{
+			height: 625px;
+			background-size: cover;
+			margin-bottom: 30px;
+			position: relative;
+
+			@media screen and (max-width: $screen-xs) {
+				height: 400px;
+			}
+			/*
+			.image-popup{
 				position: absolute;
-				top: 50%;
+				top: 20px;
 				bottom: 20px;
 				left: 20px;
 				right: 20px;
-				margin-top: -25px;
-				span {
-					color: lighten($brand-black, 50%);
-					letter-spacing: 2px;
-					font-size: 12px;
-					text-transform: uppercase;
+				background: rgba(255,255,255,.9);
+				opacity: 0;*/
+				
+				.work-title{
+					position: absolute;
+					top: 50%;
+					bottom: 20px;
+					left: 20px;
+					right: 20px;
+					margin-top: -25px;
+					span {
+						color: lighten($brand-black, 50%);
+						letter-spacing: 2px;
+						font-size: 12px;
+						text-transform: uppercase;
+					}
+					h3{
+						margin-bottom: 10px;
+					}
 				}
-				h3{
-					margin-bottom: 10px;
+		}
+            /*
+			&:hover{
+				.image-popup{
+					opacity: 1;
 				}
-			}
-		}
-
-		&:hover{
-			.image-popup{
-				opacity: 1;
-			}
-		}
+			}*/
+			
+			
 	}
-}
+
+
 
 #website-author {
 	.author {
@@ -368,6 +372,12 @@ h1, h2, h3, h4, h5, h6 {
 		}
 
 	}
+/*
+	.container::after {
+		content: url("/images/animation-circle.gif");
+	}
+
+*/
 }
 
 .section-heading {
@@ -419,7 +429,7 @@ form {
 		background-color: #fff;
 		background-image: none;
 		border: none;
-		border-bottom: 3px solid $brand-black;
+		border-bottom: 2px solid $brand-black;
 		border-radius: 4px;
 		box-shadow: none;
 		&:focus, &:active {
@@ -514,11 +524,45 @@ form {
 	}
 }
 
+/*
 .animate-box {
 	.js & {
 		opacity: 0;
 	}
+}*/
+/* Hover effect on images */
+.inner {
+	overflow : hidden;
+	cursor : pointer;
+
+	img {
+		transition: all .5s ease-in-out;
+	  }
+	   &:hover img {
+		 -webkit-transform:scale(1.05); /* Safari and Chrome */
+		 -moz-transform:scale(1.05); /* Firefox */
+		 -ms-transform:scale(1.05); /* IE 9 */
+		 -o-transform:scale(1.05); /* Opera */
+		 transform:scale(1.05);
+	 	}
+
+		&:hover .work-title h3 {
+			opacity: 1;
+			background-color: #ED1456;
+		}
+
+
+	.work-title h3 {
+		position: absolute;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		transition: all 0.4s ease-in-out; 
+		padding: 10px 15px;
+	}
 }
+
 
 footer{
 	
@@ -560,4 +604,3 @@ footer{
 		}
 	}
 }
-

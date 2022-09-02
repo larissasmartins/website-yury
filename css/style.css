@@ -109,7 +109,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 1202px) {
   #website-header .website-navbar-brand .website-logo {
-    font-size: 150px;
+    font-size: 140px;
   }
 }
 #website-header .website-navbar-brand .website-logo:hover {
@@ -131,6 +131,12 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
   display: inline-block;
   margin-left: 50px;
+  /*
+  			&:last-child {
+  				a {
+  					border-bottom: 1px solid #9797a554; 
+  			    }
+  			}*/
 }
 @media screen and (max-width: 480px) {
   #website-header .nav li {
@@ -140,9 +146,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 #website-header .nav li:first-child {
   margin-left: 0;
-}
-#website-header .nav li:last-child a {
-  border-bottom: 1px solid rgba(151, 151, 165, 0.3294117647);
 }
 #website-header .nav li a {
   font-family: "Montserrat", sans-serif;
@@ -227,27 +230,35 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
 }
 
+#work {
+  /*
+  &:hover{
+  	.image-popup{
+  		opacity: 1;
+  	}
+  }*/
+}
 #work .website-grid {
   height: 625px;
   background-size: cover;
   margin-bottom: 30px;
   position: relative;
+  /*
+  .image-popup{
+  	position: absolute;
+  	top: 20px;
+  	bottom: 20px;
+  	left: 20px;
+  	right: 20px;
+  	background: rgba(255,255,255,.9);
+  	opacity: 0;*/
 }
 @media screen and (max-width: 480px) {
   #work .website-grid {
     height: 400px;
   }
 }
-#work .website-grid .image-popup {
-  position: absolute;
-  top: 20px;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  opacity: 0;
-}
-#work .website-grid .image-popup .work-title {
+#work .website-grid .work-title {
   position: absolute;
   top: 50%;
   bottom: 20px;
@@ -255,19 +266,24 @@ h1, h2, h3, h4, h5, h6 {
   right: 20px;
   margin-top: -25px;
 }
-#work .website-grid .image-popup .work-title span {
+#work .website-grid .work-title span {
   color: gray;
   letter-spacing: 2px;
   font-size: 12px;
   text-transform: uppercase;
 }
-#work .website-grid .image-popup .work-title h3 {
+#work .website-grid .work-title h3 {
   margin-bottom: 10px;
 }
-#work .website-grid:hover .image-popup {
-  opacity: 1;
-}
 
+#website-author {
+  /*
+  	.container::after {
+  		content: url("/images/animation-circle.gif");
+  	}
+
+  */
+}
 #website-author .author .website-social-icons {
   display: flex;
   padding: 0;
@@ -324,7 +340,7 @@ form .form-control {
   background-color: #fff;
   background-image: none;
   border: none;
-  border-bottom: 3px solid #000;
+  border-bottom: 2px solid #000;
   border-radius: 4px;
   box-shadow: none;
 }
@@ -416,8 +432,39 @@ form .btn.btn-default:hover, form .btn.btn-default:focus, form .btn.btn-default:
   }
 }
 
-.js .animate-box {
+/*
+.animate-box {
+	.js & {
+		opacity: 0;
+	}
+}*/
+/* Hover effect on images */
+.inner {
+  overflow: hidden;
+  cursor: pointer;
+}
+.inner img {
+  transition: all 0.5s ease-in-out;
+}
+.inner:hover img {
+  -webkit-transform: scale(1.05); /* Safari and Chrome */
+  -moz-transform: scale(1.05); /* Firefox */
+  -ms-transform: scale(1.05); /* IE 9 */
+  -o-transform: scale(1.05); /* Opera */
+  transform: scale(1.05);
+}
+.inner:hover .work-title h3 {
+  opacity: 1;
+  background-color: #ED1456;
+}
+.inner .work-title h3 {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
   opacity: 0;
+  transition: all 0.4s ease-in-out;
+  padding: 10px 15px;
 }
 
 footer p {
