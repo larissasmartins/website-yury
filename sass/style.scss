@@ -350,14 +350,7 @@ h1, h2, h3, h4, h5, h6 {
 						margin-bottom: 10px;
 					}
 				}
-		}
-            /*
-			&:hover{
-				.image-popup{
-					opacity: 1;
-				}
-			}*/
-			
+		}	
 			
 	}
 
@@ -369,15 +362,18 @@ h1, h2, h3, h4, h5, h6 {
 			display: flex;
 			padding: 0;
 			gap: 15px;
+
+			a {
+				text-decoration: unset !important;
+			}
+
 		}
 
 	}
-/*
+
 	.container::after {
 		content: url("/images/animation-circle.gif");
 	}
-
-*/
 }
 
 .section-heading {
@@ -524,33 +520,29 @@ form {
 	}
 }
 
-/*
-.animate-box {
-	.js & {
-		opacity: 0;
-	}
-}*/
-/* Hover effect on images */
+// Hover effect on images
 .inner {
 	overflow : hidden;
 	cursor : pointer;
+	
 
 	img {
-		transition: all .5s ease-in-out;
-	  }
-	   &:hover img {
-		 -webkit-transform:scale(1.05); /* Safari and Chrome */
-		 -moz-transform:scale(1.05); /* Firefox */
-		 -ms-transform:scale(1.05); /* IE 9 */
-		 -o-transform:scale(1.05); /* Opera */
-		 transform:scale(1.05);
-	 	}
+		transition: all .7s ease-in-out;
+	}
+	
+	&:hover img {
+		-webkit-transform:scale(1.04); /* Safari and Chrome */
+		-moz-transform:scale(1.04); /* Firefox */
+		-ms-transform:scale(1.04); /* IE 9 */
+		-o-transform:scale(1.04); /* Opera */
+		transform:scale(1.04);
+		filter: brightness(50%);
+	}
 
-		&:hover .work-title h3 {
-			opacity: 1;
-			background-color: #ED1456;
-		}
-
+	&:hover .work-title h3 {
+		opacity: 1;
+		background-color: #ED1456;
+	}
 
 	.work-title h3 {
 		position: absolute;
@@ -558,11 +550,35 @@ form {
 		top: 0;
 		left: 0;
 		opacity: 0;
-		transition: all 0.4s ease-in-out; 
+		transition: all 0.5s ease-in-out; 
 		padding: 10px 15px;
 	}
 }
+/*
+@keyframes slidy {
+	0% { left: 0%; }
+	20% { left: 0%; }
+	25% { left: -100%; }
+	45% { left: -100%; }
+	50% { left: -200%; }
+	70% { left: -200%; }
+	75% { left: -300%; }
+	95% { left: -300%; }
+	98% { left: -400%; }
+	100% { left: 0%; }
+}
 
+#slider { overflow: hidden; }
+#slider .img-slider img { width: 20%; float: left; }
+#slider .img-slider { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 25s slidy infinite; 
+}*/
 
 footer{
 	
@@ -571,7 +587,7 @@ footer{
 	}
 	.border {
 		border-top: 1px solid lighten($brand-black, 90%);
-		padding: 2em 0;
+		padding: 1.5em 0 0 0;
 		float: left;
 		width: 100%;
 		@media screen and (max-width: $screen-sm) {
@@ -594,13 +610,18 @@ footer{
 	}
 	.social {
 		text-align: center;
+
+		li a {
+			text-decoration: unset !important;
+		}
+
 	}
 
 	.container {
 		.footer-widget .pull-right .social {
 			display: flex;
     		justify-content: flex-end;
-   			gap: 2rem;
+   			gap: 1.2rem;
 		}
 	}
 }
