@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Honnie";
   src: url("/fonts/honnie/Honnie.otf") format("opentype"), url("/fonts/honnie/Honnie.ttf") format("truetype");
+  font-display: block;
   font-weight: normal;
   font-style: normal;
 }
@@ -682,6 +683,10 @@ footer .container .footer-widget .pull-right .social {
 #website-main .work-pagination a:hover {
   text-decoration: unset !important;
   color: #ED1456 !important;
+}
+
+.cursor-star:hover {
+  cursor: url("/images/cursor-star.png"), auto;
 }
 
 /*# sourceMappingURL=style.css.map */
