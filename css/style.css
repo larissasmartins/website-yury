@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Honnie";
   src: url("/fonts/honnie/Honnie.otf") format("opentype"), url("/fonts/honnie/Honnie.ttf") format("truetype");
+  font-display: block;
   font-weight: normal;
   font-style: normal;
 }

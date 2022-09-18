@@ -1,7 +1,8 @@
 @font-face {
 	font-family: 'Honnie';
 	src: url('/fonts/honnie/Honnie.otf') format('opentype'),
-	url('/fonts/honnie/Honnie.ttf') format('truetype');
+		url('/fonts/honnie/Honnie.ttf') format('truetype');
+	font-display: block;
 	font-weight: normal;
 	font-style: normal;
 }
@@ -772,7 +773,7 @@ footer{
 	.work-pagination {
 		margin-top: 100px;
 	}
-	
+
 	.work-pagination a:hover {
 		text-decoration: unset !important;
 		color: $brand-red !important;
