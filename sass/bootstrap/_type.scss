@@ -311,18 +311,18 @@ address {
 
 @keyframes icon3d {
   0% {
-    text-shadow: 5px 4px $redColor, -5px -6px $blueColor;
+    text-shadow: 5px 4px $redColor, -5px -6px $yellowColor;
   }
   25% {
-    text-shadow: -5px -6px $redColor, 5px 4px $blueColor;
+    text-shadow: -5px -6px $redColor, 5px 4px $yellowColor;
   }
   50% {
-    text-shadow: 5px -4px $redColor, -8px 4px $blueColor;
+    text-shadow: 5px -4px $redColor, -8px 4px $yellowColor;
   }
   75% {
-    text-shadow: -8px -4px $redColor, -5px -4px $blueColor;
+    text-shadow: -8px -4px $redColor, -5px -4px $yellowColor;
   }
   100% {
-    text-shadow: -5px 0 $redColor, 5px -4px $blueColor;
+    text-shadow: -5px 0 $redColor, 5px -4px $yellowColor;
   }
 }
