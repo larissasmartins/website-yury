@@ -373,6 +373,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+#contact {
+  padding-bottom: unset;
+}
 @media (max-width: 425px) {
   #contact .container .intro h2 {
     font-size: 45px;
@@ -581,55 +584,101 @@ form .btn.btn-default:hover, form .btn.btn-default:focus, form .btn.btn-default:
   letter-spacing: 0.7px;
 }
 
+/*
 @keyframes slidy {
-  0% {
-    left: 0%;
-  }
-  20% {
-    left: 0%;
-  }
-  25% {
-    left: -100%;
-  }
-  45% {
-    left: -100%;
-  }
-  50% {
-    left: -200%;
-  }
-  70% {
-    left: -200%;
-  }
-  75% {
-    left: -300%;
-  }
-  95% {
-    left: -300%;
-  }
-  98% {
-    left: -400%;
-  }
-  100% {
-    left: 0%;
-  }
-}
-#slider {
-  overflow: hidden;
+	0% { left: 0%; }
+	20% { left: 0%; }
+	25% { left: -100%; }
+	45% { left: -100%; }
+	50% { left: -200%; }
+	70% { left: -200%; }
+	75% { left: -300%; }
+	95% { left: -300%; }
+	98% { left: -400%; }
+	100% { left: 0%; }
 }
 
-#slider .img-slider img {
-  width: 20%;
-  float: left;
-}
-
-#slider .img-slider {
+#slider { overflow: hidden; }
+#slider .img-slider img { width: 20%; float: left; }
+#slider .img-slider { 
   position: relative;
   width: 500%;
   margin: 0;
   left: 0;
   text-align: left;
   font-size: 0;
-  animation: 25s slidy infinite;
+  animation: 25s slidy infinite; 
+}*/
+#brand {
+  /* --- Images (gray logo) --- */
+  /*
+  .clients li:first-child img {
+  	filter: grayscale(10%) brightness(80%) contrast(50%);
+  }*/
+}
+#brand .wrap {
+  margin: 0 auto;
+}
+#brand .clients-title h3 {
+  font-size: 3em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+#brand .clients {
+  padding: unset;
+  align-items: center;
+  justify-items: center;
+  margin: 4.8rem auto;
+  display: flex;
+  justify-content: space-around;
+  padding: unset;
+}
+@media (max-width: 1200px) {
+  #brand .clients img {
+    width: 150px;
+  }
+}
+@media (max-width: 767px) {
+  #brand .clients {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 25px 0px;
+  }
+  #brand .clients img {
+    width: 115px;
+  }
+}
+#brand .clients li {
+  list-style: none;
+  margin: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#brand .clients li :nth-last-child(-n+2) img {
+  background-color: red;
+}
+#brand .clients :hover li {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+#brand .clients :hover li:not(:hover) {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+#brand .clients li:hover {
+  -webkit-transform: translateY(-0.3rem);
+  transform: translateY(-0.3rem);
+}
+#brand .clients img {
+  -webkit-filter: grayscale(70%) brightness(50%) contrast(50%);
+  filter: grayscale(70%) brightness(50%) contrast(50%);
+}
+#brand .clients img:hover {
+  background: none;
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 footer p {
@@ -692,7 +741,7 @@ footer .container .footer-widget .pull-right .social {
   padding-top: unset;
 }
 #website-main .img-projects::before {
-  content: url("/images/topbar-image2.png");
+  content: url("/images/topbar-image.png");
 }
 #website-main .work-pagination {
   margin-top: 100px;

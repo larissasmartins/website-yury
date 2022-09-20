@@ -479,6 +479,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #contact {
+	padding-bottom: unset;
 	.container .intro h2 {
 		@media (max-width: 425px) {
 			font-size: 45px;
@@ -700,6 +701,7 @@ form {
 	}
 }
 
+/*
 @keyframes slidy {
 	0% { left: 0%; }
 	20% { left: 0%; }
@@ -723,6 +725,83 @@ form {
   text-align: left;
   font-size: 0;
   animation: 25s slidy infinite; 
+}*/
+
+#brand {
+	.wrap {
+		margin: 0 auto;
+	}
+	.clients-title h3 {
+		font-size: 3em;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	.clients {
+		padding: unset;
+		align-items: center;
+		justify-items: center;
+		margin: 4.8rem auto;
+		display: flex;
+		justify-content: space-around;
+		padding: unset;
+		@media(max-width: 1200px) {
+			img {
+				width: 150px;
+			}
+		}
+		@media (max-width: 767px) {
+			display: grid;
+			grid-template-columns: auto auto;
+			grid-gap: 25px 0px;
+				
+			img {
+				width: 115px;
+			}
+		}
+
+		li {
+			list-style: none;
+			margin: 0;
+			-webkit-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
+
+			:nth-last-child(-n + 2) img {
+				background-color: red;
+			}
+		}
+
+		:hover li {
+			filter: blur(0px);
+			-webkit-filter: blur(0px);
+		}
+
+		:hover li:not(:hover)  {
+			filter: blur(2px);
+			-webkit-filter: blur(2px);
+		}
+
+		li:hover {
+			-webkit-transform: translateY(-0.3rem);
+			transform: translateY(-0.3rem); 
+		}
+	}
+
+	/* --- Images (gray logo) --- */
+	.clients img {
+	  -webkit-filter: grayscale(70%) brightness(50%) contrast(50%);
+			  filter: grayscale(70%) brightness(50%) contrast(50%); }
+		/*
+	.clients li:first-child img {
+		filter: grayscale(10%) brightness(80%) contrast(50%);
+	}*/
+	.clients img:hover {
+	  background: none;
+	  -webkit-filter: grayscale(0%);
+			  filter: grayscale(0%);
+	  -webkit-transition: all .3s ease-in-out;
+	  transition: all .3s ease-in-out; 
+	}
 }
 
 footer{
@@ -791,7 +870,7 @@ footer{
 	}
 
 	.img-projects::before {
-		content: url('/images/topbar-image2.png');
+		content: url('/images/topbar-image.png');
 	}
 	.work-pagination {
 		margin-top: 100px;
