@@ -273,6 +273,9 @@ h1, h2, h3, h4, h5, h6 {
   left: 10px;
 }
 
+#work {
+  padding-top: unset;
+}
 #work .website-grid {
   height: 320px;
   background-size: cover;
@@ -313,12 +316,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#website-author {
-  /*
-  .container::after {
-  	content: url("/images/animation-circle.gif");
-  }*/
-}
 @media (max-width: 425px) {
   #website-author .container h2 {
     font-size: 45px;
@@ -337,6 +334,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 #website-author .author .website-social-icons a {
   text-decoration: unset !important;
+}
+#website-author .animation-circle {
+  width: 35%;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: -60px;
+}
+#website-author .author-image figure {
+  padding: unset;
+}
+#website-author .author-image figure img {
+  width: 80%;
 }
 
 .section-heading {
@@ -677,6 +687,13 @@ footer .container .footer-widget .pull-right .social {
   max-height: 380px;
 }
 
+/* Work page */
+#website-main figure {
+  padding-top: unset;
+}
+#website-main .img-projects::before {
+  content: url("/images/topbar-image2.png");
+}
 #website-main .work-pagination {
   margin-top: 100px;
 }

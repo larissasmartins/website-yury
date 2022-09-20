@@ -363,7 +363,9 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-#work{
+#work {
+	padding-top: unset;
+
 		.website-grid{
 			height: 320px;
 			background-size: cover;
@@ -432,10 +434,23 @@ h1, h2, h3, h4, h5, h6 {
 		}
 
 	}
-	/*
-	.container::after {
-		content: url("/images/animation-circle.gif");
-	}*/
+
+	.animation-circle {
+		width: 35%;
+		position: absolute;
+		z-index: 1;
+		right: 0;
+		top: -60px;
+	}
+
+	.author-image figure {
+		padding: unset;
+
+		img {
+			width: 80%;
+		}
+	}
+	
 }
 
 
@@ -769,7 +784,15 @@ footer{
 	max-height: 380px;
 }
 
+/* Work page */
 #website-main {
+	figure {
+		padding-top: unset;
+	}
+
+	.img-projects::before {
+		content: url('/images/topbar-image2.png');
+	}
 	.work-pagination {
 		margin-top: 100px;
 	}
@@ -783,4 +806,3 @@ footer{
 .cursor-star:hover {
 	cursor: url('/images/cursor-star.png'), auto;
 }
-  
