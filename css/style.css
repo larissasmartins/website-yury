@@ -336,11 +336,11 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: unset !important;
 }
 #website-author .animation-circle {
-  width: 35%;
+  width: 47%;
   position: absolute;
   z-index: 1;
   right: 0;
-  top: -60px;
+  top: -120px;
 }
 #website-author .author-image figure {
   padding: unset;
@@ -611,10 +611,6 @@ form .btn.btn-default:hover, form .btn.btn-default:focus, form .btn.btn-default:
 }*/
 #brand {
   /* --- Images (gray logo) --- */
-  /*
-  .clients li:first-child img {
-  	filter: grayscale(10%) brightness(80%) contrast(50%);
-  }*/
 }
 #brand .wrap {
   margin: 0 auto;
@@ -736,7 +732,7 @@ footer .container .footer-widget .pull-right .social {
   max-height: 380px;
 }
 
-/* Work page */
+/* Work page ---------------------*/
 #website-main figure {
   padding-top: unset;
 }
