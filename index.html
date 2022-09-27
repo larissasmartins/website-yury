@@ -6,10 +6,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Website de Yury" />
 	<meta name="keywords" content="portfolio, design grafico, arte"/>
-	<title>Yury's Portfolio</title>
+	<title>Yury</title>
 
 	<!-- Place favicon.ico in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" href="images/favicon.ico">
 
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel='stylesheet' type='text/css'>
 	
@@ -32,6 +32,13 @@
 
 	</head>
 	<body>
+	<div class="loading-wrap">
+		<div id="loading"  class="loading-container">
+			<div class="loader">
+			<span></span>
+			</div>
+		</div>
+	</div>
 	<div class="box-wrap">
 		<header role="banner" id="website-header">
 			<div class="container">
@@ -70,7 +77,7 @@
 					<div class="col-md-6">
 						<div class="website-grid animate-box inner">
 							<a href="work-2.html">
-								<img src="images/work-2.jpeg" alt="" width="100%">
+								<img src="images/Work 2/SJGJ-1.png" alt="" width="100%">
 								<div class="work-title text-center">
 									<h3>Don’t Just Stand There</h3>
 								</div>
@@ -80,7 +87,7 @@
 					<div class="col-md-6">
 						<div class="website-grid animate-box inner">
 							<a href="work-3.html">
-								<img src="images/Work 3/SJGJ-1.png" alt="" width="100%">
+								<img src="images/Work 3/leiteira-logo.png" alt="" width="100%">
 								<div class="work-title text-center">
 									<h3>Guaraná Jesus no São João</h3>
 								</div>
@@ -152,11 +159,11 @@
 						</div>
 					</div>
 					<div class="col-md-6">
-						<img class="animation-circle" src="/images/animation-circle.gif" alt="Design e arte animação">
+						<img class="animation-circle" src="images/animation-circle.gif" alt="Design e arte animação">
 						<div class="author-image">
 							<div class="desc animate-box">
 								<figure>
-									<img src="/images/author-image.png" alt="Foto de Yury">
+									<img src="images/author-image.png" alt="Foto de Yury">
 								</figure>
 							</div>
 						</div>
@@ -300,12 +307,12 @@
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
 
-	<!-- Loading animation 
+	<!-- Loading animation -->
 	<script>
 		$(window).load(function() {
-		  $('#loading').hide();
+		  $('.loading-wrap').fadeOut("slow");
 		});
-	  </script>-->
+	</script>
 
 	</body>
 </html>
