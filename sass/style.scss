@@ -832,19 +832,47 @@ footer{
 }
 
 .project {
-	width: 350px;
-	max-height: 380px;
+	width: 400px;
+	max-height: 450px;
 }
 
 /* Work page ---------------------*/
 #website-main {
 	figure {
 		padding-top: unset;
+
+		.image-project {
+			max-width: 70%;
+		}
 	}
 
-	.img-projects::before {
-		content: url('/images/topbar-image.png');
+	.image-container {
+		.image-projects::before {
+			content: url('/images/topbar-image.png');
+		}
 	}
+
+	.image-projects {
+		margin-top: 50px;
+	}
+
+	.video-container {
+		background-color: $brand-yellow;
+	}
+
+	h1 {
+		font-size: 55px;
+		margin: 70px 0;
+		background-color: $brand-primary;
+		padding: 20px;
+		color: $brand-white;
+		letter-spacing: 1px;
+	}
+	
+	p {
+		margin-bottom: 50px;
+	}
+
 	.work-pagination {
 		margin-top: 100px;
 	}

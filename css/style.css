@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Honnie";
-  src: url("/fonts/honnie/Honnie.otf") format("opentype"), url("/fonts/honnie/Honnie.ttf") format("truetype");
-  font-display: block;
+  src: url("../fonts/honnie/Honnie.otf") format("opentype"), url("../fonts/honnie/Honnie.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -11,6 +10,12 @@
   src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: "Freigeist";
+  src: url("../fonts/freigeist/Fontspring-DEMO-freigeistmono-regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;  
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -154,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 0;
 }
 #website-header .nav li a {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Freigeist", sans-serif;
   font-size: 20px;
   text-transform: uppercase;
   color: rgb(0, 0, 0);
@@ -209,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #services .service {
   text-align: left;
-  padding: 2.5em 1.6em 0;
+  padding: 1.5em 1em 0;
   margin: 20px 0;
   float: left;
   width: 100%;
@@ -232,9 +237,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 20px;
 }
 #services .service h3 {
+  font-family: "Freigeist", sans-serif;
   margin-bottom: 10px;
-  color: #fff;
-  letter-spacing: 1.5px;
+  color: #000;
+  font-size: 25px;
 }
 @media (max-width: 425px) {
   #services .service h3 {
@@ -242,10 +248,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 #services .service p {
-  color: #fff;
-}
-#services .service p {
   font-size: 18px;
+  color: #000;
 }
 @media (max-width: 425px) {
   #services .service p {
@@ -264,7 +268,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 #services .container::before {
   content: "";
-  background-color: #11B6EF;
   width: 98%;
   z-index: 0;
   position: absolute;
@@ -578,37 +581,13 @@ form .btn.btn-default:hover, form .btn.btn-default:focus, form .btn.btn-default:
   transition: all 0.5s ease-in-out;
   padding: 10px 15px;
   color: white;
-  font-family: "Montserrat";
+  font-family: "Freigeist", sans-serif;
   text-transform: uppercase;
   font-size: 21px;
   letter-spacing: 0.7px;
 }
 
-/*
-@keyframes slidy {
-	0% { left: 0%; }
-	20% { left: 0%; }
-	25% { left: -100%; }
-	45% { left: -100%; }
-	50% { left: -200%; }
-	70% { left: -200%; }
-	75% { left: -300%; }
-	95% { left: -300%; }
-	98% { left: -400%; }
-	100% { left: 0%; }
-}
-
-#slider { overflow: hidden; }
-#slider .img-slider img { width: 20%; float: left; }
-#slider .img-slider { 
-  position: relative;
-  width: 500%;
-  margin: 0;
-  left: 0;
-  text-align: left;
-  font-size: 0;
-  animation: 25s slidy infinite; 
-}*/
+/* Cliente's section */
 #brand {
   /* --- Images (gray logo) --- */
 }
@@ -728,16 +707,36 @@ footer .container .footer-widget .pull-right .social {
 }
 
 .project {
-  width: 350px;
-  max-height: 380px;
+  width: 400px;
+  max-height: 450px;
 }
 
 /* Work page ---------------------*/
 #website-main figure {
   padding-top: unset;
 }
-#website-main .img-projects::before {
+#website-main figure .image-project {
+  max-width: 70%;
+}
+#website-main .image-container .image-projects::before {
   content: url("/images/topbar-image.png");
+}
+#website-main .image-projects {
+  margin-top: 50px;
+}
+#website-main .video-container {
+  background-color: #FFCD52;
+}
+#website-main h1 {
+  font-size: 55px;
+  margin: 70px 0;
+  background-color: #11B6EF;
+  padding: 20px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+#website-main p {
+  margin-bottom: 50px;
 }
 #website-main .work-pagination {
   margin-top: 100px;
@@ -748,7 +747,7 @@ footer .container .footer-widget .pull-right .social {
 }
 
 .cursor-star:hover {
-  cursor: url("/images/cursor-star.png"), auto;
+  cursor: url("../images/cursor-star.png"), auto;
 }
 
 /*# sourceMappingURL=style.css.map */
